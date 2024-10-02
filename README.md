@@ -1,6 +1,8 @@
 # FIT-JS-modal-windows
 Hey. You are just looking at a JS class with which you can make cool modal windows on your site with a little CSS. Its weight is only 5-6kb which is why it is called FIT. It supports animations based on [aniamte.css](https://animate.style).
 
+You can find demo here: [lightweight modal windows demo](https://sarbiewski.org/window/)
+
 ## CSS
 To use this modal, you only need a few lines of CSS. This is the basic styling:
 ```css
