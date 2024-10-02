@@ -39,7 +39,7 @@ class CreateWindow {
 		this.header.classList.add(headerclass);
 
 		const headerText = document.createElement('span');
-		headerText.innerHTML = options.headerText || 'Demo header!';
+		headerText.innerHTML = options.headerText || 'Thx for using!';
 		this.header.appendChild(headerText);
 
 		const closeButton = document.createElement('button');
@@ -51,7 +51,7 @@ class CreateWindow {
 		this.window.appendChild(this.header);
 
 		this.content = document.createElement('div');
-		this.content.innerHTML = options.content || '<p>All your content goes here!</p>';
+		this.content.innerHTML = options.content || '<p>Hi. Thanks for using FIT Modal Windows :)</p><p>You can find the author at <a href="https://sarbiewski.org/">Karol Sarbiewski portfolio</a> or on GitHub <a href="https://github.com/El-Karollo">github.com/El-Karollo</a></p>';
 		this.window.appendChild(this.content);
 
 		document.body.appendChild(this.window);
