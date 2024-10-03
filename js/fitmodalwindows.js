@@ -12,7 +12,7 @@ class CreateWindow {
 		this.window.classList.add('animate__animated');
 		this.window.classList.add(windowclass);
 
-		if (options.top || options.bottom || options.left || options.right) {
+		if (options.top || options.left || options.right) {
 			if (options.top) {
 				this.window.style.top = options.top;
 			}
@@ -21,9 +21,6 @@ class CreateWindow {
 			}
 			if (options.right) {
 				this.window.style.right = options.right;
-			}
-			if (options.bottom) {
-				this.window.style.bottom = options.bottom;
 			}
 		} else {
 			this.window.style.top = '50vh';
