@@ -158,6 +158,28 @@ In order to open a window when you click on a button/link/whatever, you need to 
 		}
 </script>
 ```
+## Dynamic change of window content
+For each window, you can call the ``updateContent`` function to change the content inside. To do this, you need to refer to the variable that creates the window. However, you need to remember - in order to call ``updateContent`` inside another function - you need to define the window variable globally. The example should explain this well.
+
+```html
+		<button onclick="openwindowonclick()">Click to open window</button>
+		<button onclick="changecontent()">Click to change content of the opened window</button>
+
+	<script>
+		var windowclick;
+
+		function openwindowonclick() {
+			windowclick = new CreateWindow('windowonclick', {
+				headerText: 'Window header',
+				content: 'Content that will be changed'
+			});
+		}
+
+		function changecontent() {
+			windowclick.updateContent('The content has been changed');
+		}
+```
+As you can see - the window variable was defined globally - that is, before the function in which the window is created.
 
 # For now, that's all :)
 I'm glad that somewhere my script helped someone to do something cool on the website :)
