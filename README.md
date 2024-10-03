@@ -178,6 +178,7 @@ For each window, you can call the ``updateContent`` function to change the conte
 		function changecontent() {
 			windowclick.updateContent('The content has been changed');
 		}
+	</script>
 ```
 As you can see - the window variable was defined globally - that is, before the function in which the window is created.
 
