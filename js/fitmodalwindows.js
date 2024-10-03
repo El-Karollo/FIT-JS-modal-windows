@@ -88,6 +88,10 @@ class CreateWindow {
 		}, 500);
 	}
 
+	updateContent(newContent) {
+		this.content.innerHTML = newContent;
+	}
+
 	dragElement(elmnt) {
 		let pos1 = 0,
 			pos2 = 0,
