@@ -40,7 +40,7 @@ To use this modal, you only need a few lines of CSS. This is the basic styling:
 		}
 ```
 ## JS
-The entire class script is located in the ``js/fitmodalwindows.js`` folder. We just need to add ``<script src=“fitmodalwindows.js”></script>`` to our page.
+The entire class script is located in the ``js/fitmodalwindows.js`` folder. We just need to add ``<script src="fitmodalwindows.js"></script>`` to our page.
 
 ## Animations
 As I said earlier, all animations are based on aniamte.css. In order for them to work we need to add this CSS sheet to our page. We can use CDN:
