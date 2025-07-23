@@ -6,38 +6,38 @@ You can find demo here: [lightweight modal windows demo](https://sarbiewski.org/
 ## CSS
 To use this modal, you only need a few lines of CSS. This is the basic styling:
 ```css
-		.window-draggable {
-			cursor: move;
-		}
+.window-draggable {
+    cursor: move;
+}
 
-		.window {
-			position: absolute;
-			z-index: 9;
-			text-align: center;
-			display: none;
-			background: rgba(255, 255, 255, 0.2);
-			box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-			backdrop-filter: blur(13px);
-			border-radius: 10px;
-		}
+.window {
+    position: absolute;
+    z-index: 9;
+    text-align: center;
+    display: none;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(13px);
+    border-radius: 10px;
+}
 
-		.window-header {
-			padding: 10px;
-			z-index: 10;
-			background-color: #2196F3;
-			color: #fff;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-		}
+.window-header {
+    padding: 10px;
+    z-index: 10;
+    background-color: #2196F3;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-		.close-btn {
-			background-color: red;
-			border: none;
-			color: white;
-			padding: 5px 10px;
-			cursor: pointer;
-		}
+.close-btn {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
 ```
 ## JS
 The entire class script is located in the ``js/fitmodalwindows.js`` folder. We just need to add ``<script src="fitmodalwindows.js"></script>`` to our page.
@@ -57,19 +57,19 @@ As I said earlier, all animations are based on aniamte.css. In order for them to
 Using FIT modal windows is trivial and limited to creating a single command. It looks like this:
 ```html
 <script>
-		var temporary_variable = new CreateWindow('WINDOW_NAME', {
-			OPTIONS_ARRAY
-		});
+    var temporary_variable = new CreateWindow('WINDOW_NAME', {
+        OPTIONS_ARRAY
+    });
 </script>.
 ```
 
 To create a basic window that will open as soon as the page loads with default style settings - we use code:
 ```html
 <script>
-		var win1 = new CreateWindow('window1', {
-			headerText: 'Header 1',
-			content: '<p>This is the content of Window 1</p>',
-		});
+    var win1 = new CreateWindow('window1', {
+        headerText: 'Header 1',
+        content: '<p>This is the content of Window 1</p>',
+    });
 </script>
 ```
 
@@ -97,31 +97,31 @@ In the options table, we have several options for setting up a particular window
 ## Demo code of all the options:
 ```html
 <script>
-		var window1337 = new CreateWindow('window1337', {
-			windowClass: 'window-alt',
-			headerClass: 'window-header-alt',
-			closeClass: 'close-btn-alt',
-			closeIcon: '<span style="font-size: 20px; color: black;">CLOSE</span>',
-			width: '500px',
-			height: '50vh',
-			top: '350px',
-			left: '50vw',
-			openAnimation: 'animate__lightSpeedInRight',
-			closeAnimation: 'animate__rotateOut',
-			draggable: true,
-			headerText: `
-      <b>Super header<b> of
-      this <i>website</i>
-      `,
-			content: `
-      <p>This is the content of awesome window</p>
-      <br>
-      <p>Visit creator of this script at Karol Sarbiewski - https://sarbiewski.org/</p>
-      <span class="close-window-button">close</span>
-      <br>
-      `,
-			showAfter: 3000
-		});
+    var window1337 = new CreateWindow('window1337', {
+        windowClass: 'window-alt',
+        headerClass: 'window-header-alt',
+        closeClass: 'close-btn-alt',
+        closeIcon: '<span style="font-size: 20px; color: black;">CLOSE</span>',
+        width: '500px',
+        height: '50vh',
+        top: '350px',
+        left: '50vw',
+        openAnimation: 'animate__lightSpeedInRight',
+        closeAnimation: 'animate__rotateOut',
+        draggable: true,
+        headerText: `
+            <b>Super header<b> of
+            this <i>website</i>
+            `,
+                content: `
+            <p>This is the content of awesome window</p>
+            <br>
+            <p>Visit creator of this script at Karol Sarbiewski - https://sarbiewski.org/</p>
+            <span class="close-window-button">close</span>
+            <br>
+    `,
+        showAfter: 3000
+    });
 </script>
 ```
 
@@ -145,39 +145,39 @@ In order to open a window when you click on a button/link/whatever, you need to 
 <button onclick="openwindowonclick()">Click here to open window</button>
 
 <script>
-		function openwindowonclick() {
-			var winonclick = new CreateWindow('windowonclick', {
-				width: '500px',
-				top: '0px',
-				right: '0px',
-				draggable: true,
-				headerText: 'Window shows on click',
-				content: `<p>Content of window</p>`
-			});
-		}
+    function openwindowonclick() {
+        var winonclick = new CreateWindow('windowonclick', {
+            width: '500px',
+            top: '0px',
+            right: '0px',
+            draggable: true,
+            headerText: 'Window shows on click',
+            content: `<p>Content of window</p>`
+        });
+    }
 </script>
 ```
 ## Dynamic change of window content
 For each window, you can call the ``updateContent`` function to change the content inside. To do this, you need to refer to the variable that creates the window. However, you need to remember - in order to call ``updateContent`` inside another function - you need to define the window variable globally. The example should explain this well.
 
 ```html
-		<button onclick="openwindowonclick()">Click to open window</button>
-		<button onclick="changecontent()">Click to change content of the opened window</button>
+<button onclick="openwindowonclick()">Click to open window</button>
+<button onclick="changecontent()">Click to change content of the opened window</button>
 
-	<script>
-		var windowclick;
+<script>
+    var windowclick;
 
-		function openwindowonclick() {
-			windowclick = new CreateWindow('windowonclick', {
-				headerText: 'Window header',
-				content: 'Content that will be changed'
-			});
-		}
+    function openwindowonclick() {
+        windowclick = new CreateWindow('windowonclick', {
+            headerText: 'Window header',
+            content: 'Content that will be changed'
+        });
+    }
 
-		function changecontent() {
-			windowclick.updateContent('The content has been changed');
-		}
-	</script>
+    function changecontent() {
+        windowclick.updateContent('The content has been changed');
+    }
+</script>
 ```
 As you can see - the window variable was defined globally - that is, before the function in which the window is created.
 
