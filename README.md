@@ -119,7 +119,7 @@ In the options table, we have several options for setting up a particular window
             <p>Visit creator of this script at Karol Sarbiewski - https://sarbiewski.org/</p>
             <span class="close-window-button">close</span>
             <br>
-    `,
+        `,
         showAfter: 3000
     });
 </script>
